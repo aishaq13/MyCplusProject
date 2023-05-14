@@ -1,0 +1,60 @@
+//Dollar Game program
+//Aisha Qureshi 09/28/22
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    //Constants
+    const double PENNY = 0.01;
+    const double NICKLE = 0.05;
+    const double DIME = 0.10;
+    const double QUARTER = 0.25;
+    const double DOLLAR = 1.00;
+    
+    //Variables for user imput
+    int numPennies; //hold numebr of pennies
+    int numNickles; //holds number of nickles
+    int numDimes; //hold number of dimes
+    int numQuarters; //holds number of quarters 
+    
+    //Variable for calulation
+    double total; //hold the total amount
+    
+    //Objective of the coin
+    cout << "Lets play a change-counting game. \n\n"
+        << "Enter the number of coins needed to make "
+        << "exactly one dollar. \n\n";
+        
+    //gets the numbe rof pennies
+    cout<<"Enter the number of pennies: ";
+    cin>>numPennies;
+    
+    //gets number of nickles
+    cout <<"Enter the nickles: ";
+    cin>> numNickles;
+    
+    //gets the number of dimes
+    cout<<"Enter the number of dimes: ";
+    cin>>numDimes;
+    
+    //gets the number of quarters
+    cout<<"Enter the number of quarters: ";
+    cin >> numQuarters;
+    
+    //Calculates the total.
+    total = numPennies *PENNY + 
+            numNickles *NICKLE +
+            numDimes*DIME + 
+            numQuarters * QUARTER;
+    
+    //Results
+    if (total>DOLLAR)
+    cout<< "\nSorry, thats's more than one dollar. \n";
+    else if (total<DOLLAR)
+    cout<<"\nSorry, thats's less than one dollar.\n";
+    else 
+    cout<<"\nCongratulations! You win!\n";
+    
+}

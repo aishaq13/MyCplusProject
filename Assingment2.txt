@@ -1,0 +1,18 @@
+// Aisha Qureshi
+// 09/11/2022
+
+#include <iostream>
+#include <string>
+
+int main()
+{
+  std:: string name = "Aisha Qureshi";
+  int number = 7;
+  double numberDividedBy = number /2;
+  int numberMultipliedBy = number *2; 
+  
+  std::cout << "Name: " << name<< std:: endl;
+    std::cout << "Number: " << number<< std::endl; 
+      std::cout << "Number Divided by: " << numberDividedBy << std:: endl;
+        std::cout << "Number Multiplied by: " << numberMultipliedBy << std::endl; 
+}

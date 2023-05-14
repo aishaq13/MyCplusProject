@@ -1,0 +1,31 @@
+//Aisha Qureshi
+//Assingment 3- 09/25/22
+
+#include <iostream>
+#include <string>
+
+int main()
+{
+    std::string name;
+    int num1;
+    int num2;
+    int num3;
+
+    std::cout << "Name: ";
+    std::cin >> name;
+
+    std::cout << "Enter a number: ";
+    std::cin >> num1;
+
+    std::cout << "Enter another number: ";
+    std::cin >> num2;
+
+    std::cout << "Enter another number: ";
+    std::cin >> num3;
+
+    int result = num1 * num2 + num3;
+
+    std::cout << num1 << " * " << num2 << " + " << num3 << " = " << result << "\n";
+
+    return 0;
+}
