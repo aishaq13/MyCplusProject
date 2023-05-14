@@ -1,0 +1,69 @@
+//Aisha Qureshi 
+//11/14/2022
+
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int numDogs;
+    float weight;
+    float sum = 0;
+    float avg;
+    int high = 0;
+    string highName = "";
+    int low = 1000;
+    string lowName = "";
+    cout << "How many dogs would you like to enter: ";
+    cin >> numDogs;
+
+    if(numDogs < 0)
+    {
+        cout << "You cannot enter a negative number of dogs." << endl;
+        return 0;
+    }
+    string *namePointer = new string[numDogs];
+    float *weightPointer = new float[numDogs];
+
+    for(int i = 0; i < numDogs; i++)
+    {
+        cout << "Enter the name of dog " << i + 1 << ": ";
+        cin >> namePointer[i];
+        cout << "Enter the weight of " << namePointer[i] << ": ";
+        cin >> weightPointer[i];
+
+        if(weightPointer[i] < 0)
+        {
+            cout << "The weight cannot be a negative number." << endl;
+            return 0;
+        }
+    }
+
+    for(int i = 0; i < numDogs; i++)
+    {
+        sum += weightPointer[i];
+    }
+    avg = sum/numDogs;
+
+    for(int i = 0; i < numDogs; i++)
+    {
+        if(weightPointer[i] > high)
+        {
+            high = weightPointer[i];
+            highName = namePointer[i];
+        }
+        if(weightPointer[i] < low)
+        {
+            low = weightPointer[i];
+            lowName = namePointer[i];
+        }
+    }
+
+    cout << "------------------------------------------" << endl;
+    cout << "Total Weight: " << sum << endl;
+    cout << "Average Weight: " << avg << endl;
+    cout << "Highest Weight: " << highName << endl;
+    cout<< "Lowest Weight: " << lowName << endl;
+    return 0;
+    }
