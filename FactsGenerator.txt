@@ -1,0 +1,64 @@
+//Animal Facts
+#include <iostream>
+
+using namespace std;
+
+//switchAnimal function to return a fact about animal using switch
+string switchAnimal(int n1)
+{
+    switch(n1)
+    {
+        case 1 : return "Owls don't have eyeballs. They have eyetubes.";
+                break;
+        case 2 : return "Dog's sense of smell is about 100,000 times stronger than humans.";
+                break;
+        case 3 : return "Squirrels can't burp or vomit.";
+                break;
+        case 4 : return "Honeybees can flap their wings 200 times every second.";
+                break;
+        case 5 : return "Horses use facial expressions to communicate with eachother.";
+                break;
+        default : cout<<"Invalid";
+                return 0;
+                break;
+    }
+}
+
+//Sport fact function
+//ifSport function to print a fact about a sport using if/else
+void ifSport(int n2)
+{
+    if (n2 == 1)
+    {
+        cout<<"Tennis strings were traditionally made from the intestines of goats, cows or sheep.";
+    }
+    else if (n2 == 2)
+    {
+        cout<<"Golf balls have around 336 dimples.";
+    }
+    else if (n2 == 3)
+    {
+        cout<<"Ski ballet was once a competitive sport.";
+    }
+    else if (n2 == 4)
+    {
+        cout<<"Tug Of War used to be an Olympic sport between 1900 and 1920.";
+    }
+    else
+    {
+        cout<<"There are only 18 minutes of action in the average baseball game.";
+    }
+}
+
+//Main Function
+//main function to generate random numbers and call the functions
+int main()
+{
+    srand(time(0));  // Initialize random number generator.
+    int number1 = (rand() % 5) + 1; //random number1
+    cout<<endl<<switchAnimal(number1)<<endl; //function calling and printing the return statements
+    int number2 = (rand() % 5) + 1; //random number2
+    ifSport(number2); //function calling
+
+    return 0;
+}
